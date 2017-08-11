@@ -78,33 +78,33 @@
                         </div>                       
                     </div>
                 </div>
-                <form name="PostsCreateForm" role="form">
+                <form name="PostsCreateForm" ng-submit="Save()" role="form">
                     <div class="form-horizontal">
                         <div class="form-group">
                             <label class="col-md-2 control-label">Başlık*:</label>
                             <div class="col-md-10">
-                                <input type="text" class="form-control" name="name" ng-model="Name" />
+                                <input type="text" class="form-control" name="postName" ng-model="Name" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-2 control-label">Body:</label>
                             <div class="col-md-10">
-                                <textarea class="form-control" name="body" ng-model="Body"></textarea>
+                                <textarea class="form-control" name="postBody" ng-model="Body"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-2 control-label">Yayın Tarihi*:</label>
                             <div class="col-md-10">
-                                <input type="datetime" class="form-control" name="publishDate" ng-model="PublishDate" />
+                                <input type="datetime" class="form-control" name="postPublishDate" ng-model="PublishDate" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-2 control-label">Yayında Mı?*:</label>
                             <div class="col-md-10">
-                                <input type="checkbox" class="form-control" name="isPublished" ng-model="IsPublished" />
+                                <input type="checkbox" class="form-control" name="postIsPublished" ng-model="IsPublished" />
                             </div>
                         </div>
-                        <button type="button" class="btn btn-primary" ng-click="Save()">Kaydet</button>
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
                     </div>
                 </form>
             </div>
