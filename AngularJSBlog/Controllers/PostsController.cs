@@ -19,6 +19,14 @@ namespace AngularJSBlog.Controllers
             }
         }
 
+        public Post Get(int id)
+        {
+            using (var db = new AngularJSBlogContext())
+            {
+                return db.Posts.FirstOrDefault(p =>p.Id == id);
+            }
+        }
+
         public void Post(Post post)
         {
             if (ModelState.IsValid)
@@ -26,6 +34,31 @@ namespace AngularJSBlog.Controllers
                 using (var db = new AngularJSBlogContext())
                 {
                     db.Posts.Add(post);
+                    db.SaveChanges();
+                }
+            }
+        }
+
+        public void Put(Post post)
+        {
+            if (ModelState.IsValid)
+            {
+                using (var db = new AngularJSBlogContext())
+                {
+                    db.Entry<Post>(post).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                }
+            }
+        }
+
+        public void Delete(int id)
+        {
+            using (var db = new AngularJSBlogContext())
+            {
+                var post = db.Posts.FirstOrDefault(p => p.Id == id);
+                if (post != null)
+                {
+                    db.Posts.Remove(post);
                     db.SaveChanges();
                 }
             }

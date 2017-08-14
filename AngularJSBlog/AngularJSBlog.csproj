@@ -5553,6 +5553,7 @@
     <Content Include="assets\pages\scripts\v,..min.js" />
     <Content Include="assets\pages\scripts\widgets.js" />
     <Content Include="assets\pages\scripts\widgets.min.js" />
+    <Content Include="ClientApp\js\controllers\PostsEditController.js" />
     <Content Include="ClientApp\js\controllers\PostsCreateController.js" />
     <Content Include="ClientApp\js\controllers\PostsController.js" />
     <Content Include="ClientApp\js\controllers\BlankController.js" />
@@ -5569,6 +5570,7 @@
     <Content Include="ClientApp\tpl\quick-sidebar.html" />
     <Content Include="ClientApp\tpl\sidebar.html" />
     <Content Include="ClientApp\tpl\theme-panel.html" />
+    <Content Include="ClientApp\views\postsedit.html" />
     <Content Include="ClientApp\views\postscreate.html" />
     <Content Include="ClientApp\views\posts.html" />
     <Content Include="ClientApp\views\blank.html" />

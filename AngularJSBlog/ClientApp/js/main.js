@@ -187,6 +187,24 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
             }
         })
 
+        .state('edit-post', {
+            url: "/edit-post?id",
+            templateUrl: "/ClientApp/views/postsedit.html",
+            data: { pageTitle: 'Yazý Düzenle' },
+            controller: "PostsEditController",
+            resolve: {
+                deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        name: 'MetronicApp',
+                        insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
+                        files: [
+                            '/ClientApp/js/controllers/PostsEditController.js'
+                        ]
+                    });
+                }]
+            }
+        })
+
         // AngularJS plugins
         .state('fileupload', {
             url: "/file_upload.html",

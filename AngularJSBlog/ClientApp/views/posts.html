@@ -122,8 +122,8 @@
                         <td title="'Yayında Mı?'" filter="{ IsPublished: 'select'}" filter-data="[{id:'true', title:'Evet'}, {id:'false', title:'Hayır'}]" sortable="'IsPublished'">
                             {{post.IsPublished}}
                         </td>
-                        <td title="'Eylemler'">
-                            
+                        <td title="'Eylemler'" class="text-nowrap">
+                            <a href="#/edit-post?id={{post.Id}}" class="btn btn-primary">Düzenle</a> <a href="javascript:void(0);" ng-click="Delete(post.Id)" class="btn btn-danger">Sil</a>
                         </td>
                     </tr>
                 </table>
